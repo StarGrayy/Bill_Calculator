@@ -1,15 +1,8 @@
-const bill = document.getElementById('bill');
-const tip = document.getElementById('tip');
+function calculateBill(){
 
-const btn = document.getElementById('btn');
-
-const calculate_bill=()=>{
-    const result=document.getElementById('result');
+    const bill = parseFloat(document.getElementById('bill').value);
+    const tip = parseFloat(document.getElementById('tip').value);
     const ans=bill+(bill*tip)/100;
-    console.log(ans);
-    btn.addEventListener("click",()=>{
-        let value = 'Your Bill is ${ans}';
-        result.innerHTML=value;
-    });
+
+    document.getElementById('result').innerText=`Your Bill is ${ans}`;
 } 
-calculate_bill();
